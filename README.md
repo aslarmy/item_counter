@@ -1,39 +1,71 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Item_Counter
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+A flutter plugin for handling ecommerce app item count. Works on both Android & iOS.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+<!-- [![Pub Package](https://img.shields.io/pub/v/advance_pdf_viewer.svg?style=flat-square)](https://pub.dartlang.org/packages/advance_pdf_viewer) -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
 
-## Features
+## Installation
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+Add  *item_counter*  as a dependency in [your pubspec.yaml file](https://flutter.io/platform-plugins/).
+```
+  item_counter:
+    git:
+      url: https://github.com/aslarmy/item_counter.git
+      ref: main
 ```
 
-## Additional information
+---
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+## Android
+No permissions required. Uses application cache directory.
+
+## iOS
+No permissions required.
+
+## How-to:
+
+#### Show item counter
+```
+// view item counter
+Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            ItemCounter(),
+          ],
+        ),
+```
+
+#### Customize parameter
+```
+// Change view
+ ItemCounter(
+              isVertical: false,
+              maxLimit: 10,
+              iconSize: 40,
+            ),
+```
+
+This code produces the following view:
+
+<img height="500px" src="https://raw.githubusercontent.com/lohanidamodar/pdf_viewer/master/demo.png" alt="Demo Screenshot 1"/>
+
+---
+
+## TODO
+
+* ~~Create Item Counter~~
+* Implement Animation
+* Custom Icons
+* Custom Color
+
+---
+<!--
+#### Third-party packages used
+
+| Name | Description  |
+|-|-|
+| [path_provider](https://pub.dartlang.org/packages/path_provider)               | A Flutter plugin for finding commonly used locations on the filesystem. Supports iOS and Android.            |
+| [flutter_cache_manager](https://pub.dartlang.org/packages/flutter_cache_manager)       | A CacheManager to download and cache files in the cache directory of the app. Various settings on how long to keep a file can be changed. |
+| [numberpicker](https://pub.dartlang.org/packages/numberpicker)                | NumberPicker is a custom widget designed for choosing an integer or decimal number by scrolling spinners. |
+| [flutter_advanced_networkimage](https://pub.dartlang.org/packages/flutter_advanced_networkimage) | An advanced image provider provides caching and retrying for flutter app. Now with zoomable widget and transition to image widget. | ~~>
