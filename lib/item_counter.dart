@@ -28,6 +28,7 @@ class _ItemCounterState extends State<ItemCounter> {
       color: Colors.grey[100],
       child: widget.isVertical
           ? Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 GestureDetector(
                   onTap: () {
@@ -60,6 +61,7 @@ class _ItemCounterState extends State<ItemCounter> {
               ],
             )
           : Row(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 const SizedBox(width: 8),
                 GestureDetector(
